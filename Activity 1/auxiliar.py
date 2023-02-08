@@ -1,5 +1,6 @@
 import json
 from urllib.request import urlopen
+import datetime
 
 def getParsedData(url):
     data = urlopen(url)
@@ -8,12 +9,11 @@ def getParsedData(url):
 def printWeek(data):
     days = data['days']
     for i in range(5):
-        today = days[i]
-        # TODO poner dia (no fecha)
-        day = today['datetime']
+        today = days[i]        
+        day = datetime.datetime.strptime(today['datetime'],'%Y-%m-%d').strftime('%A')
         min = today['tempmin']
         max = today['tempmax']
-        print(f'{day}:   min: {min}°  max: {max}°')
+        print(f'{day}:  min: {min}°  max: {max}°')
 
 
 def printProbToday(data):

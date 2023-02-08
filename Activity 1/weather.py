@@ -1,15 +1,16 @@
 import sys
+import json
 from auxiliar import *
 
 def main():
     action= sys.argv[1]
 
-    # TODO: Deben ser pasados por textos
-    latitude= -32.890034 
-    longitude= -68.844536
+    coordinatesFile = open("./coordinates.txt")
+    coordinates = json.loads(coordinatesFile.read())
+    latitude = coordinates["latitude"]
+    longitude = coordinates["longitude"]
 
     url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{latitude}%2C%20{longitude}/next7days?unitGroup=metric&key=GM9ED2D56JN99DG45BK8DWLEH&contentType=json'
-    
 
     if action == '-week':
         parsedData = getParsedData(url+ '&include=days')
@@ -22,6 +23,9 @@ def main():
     elif action == '-rainProbabilityWeek':
         parsedData = getParsedData(url+ '&include=days')
         printProbWeek(parsedData)
+    
+    else:
+        print("Invalid command")
       
 
 if __name__ == '__main__':
