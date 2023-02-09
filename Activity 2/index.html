@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /> <!--Cambiar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+  </head>
+  <body>
+
+    <h1>Weather Forecast Lila </h1>
+    <div>
+        <p>Enter the coordinates:</p>
+        <form id="coordinates">
+            <input type="text" name="latitud" placeholder="Latitud" id="lt">
+            <input type="text" name="longitud" placeholder="Longitud" id="lg">
+            <button id="ok">Ok</button>
+        </form>
+    </div>
+    <div>
+        <div id="buttons">
+            <button id="showWeather">Weather Today</button>
+            <button>Maximum & minimum temperature of week</button>
+            <button>Probability of precipitation today</button>
+            <button>Probability of precipitation this week</button>
+        </div>
+    </div>
+    <div id="root">
+      <p>Please, enter the coordinates</p>
+    </div>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>

@@ -7,6 +7,7 @@ def getParsedData(url):
     return json.loads(data.read())
 
 def printWeek(data):
+    # Imprime máxima y mínima de los próximos 5 días de la semana
     days = data['days']
     for i in range(5):
         today = days[i]        
@@ -17,6 +18,7 @@ def printWeek(data):
 
 
 def printProbToday(data):
+    # Imprime la probabilidad de lluvia a lo largo del día (cada hora)
     for hour in data['days'][0]['hours']:
         currentHour = hour['datetime']
         probability = hour['precipprob']
@@ -24,6 +26,7 @@ def printProbToday(data):
 
 
 def printProbWeek(data):
+    # Imprime el día de la semana con mayor probabilidad de lluvia 
     maxProb = 0
     for currentDay in data['days']:
         currentProb = currentDay['precipprob']
