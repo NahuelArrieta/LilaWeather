@@ -3,12 +3,12 @@ const getUrl = ()=>{
     let longitude = document.getElementById("lg").value;
 
     if (!latitude || !longitude) {
-        alert("Please, enter the coordinates");
+        alert("Please, enter the coordinates.");
         return
     }
 
     if (Math.abs(latitude) > 90 || Math.abs(longitude) > 180) {
-        alert("The coordinates entered are not valid");
+        alert("The coordinates entered are not valid.");
         return
     }
 
