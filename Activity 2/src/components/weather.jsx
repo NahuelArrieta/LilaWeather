@@ -1,10 +1,10 @@
 const Weather = ({info}) => {
     return (
       <div>
-        <p>{info.conditions}</p>
-        <p>Temperature: <span>{info.temp}</span></p>
-        <p>Windspeed: <span>{info.windspeed}</span></p>
-        <p>Probability of Rain: <span>{info.precipprob}</span></p>
+        <p>Description: {info.conditions}</p>
+        <p>Temperature: {info.temp}°C</p>
+        <p>Windspeed: {info.windspeed} kph</p>
+        <p>Probability of precipitation: {info.precipprob}%</p>
         
       </div>
     )

@@ -1,9 +1,4 @@
-const HourProb = ({hour, prob}) =>{
-    return(
-        <div>
-            <p>{hour}: {prob} </p>
-        </div>
-    )
-}
+const HourProb = ({hour, prob}) => <p id="hourProb">{hour} <span>{prob}%</span> </p>
+
 
 export default HourProb

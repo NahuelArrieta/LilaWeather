@@ -1,27 +1,106 @@
-div{
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-    
-    margin: 5px;
-    padding: 10px;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+body {
+    background-color: #cccccc;
 }
 
-#buttons{
-    align-items: center;
+h1 {
+    padding: 0px 10px;
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #273263;
+    display: block;
+    
+    font-weight: bold;
 }
+
+button {
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #aaa9a9;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: #273263;  
+} 
+
+div{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #606ead;
+}
+
+#coordinates, #buttons {
+    align-items: center;
+    display: flex; 
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/* Coordinates Div */
+
+#coordinates{
+    height: 40px;
+    justify-content: flex-start;
+}
+
+#coordinates p{
+    width: 20%;
+    font-size: 20px;
+    margin: auto 0;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 50%;
+}
+
+#ok{
+    margin-left: auto ;
+}
+
+input{
+    width: 45%;
+}
+
+/* Buttons div */
 
 #buttons button{
-    height: 40px;
-    width: 24.5%;
-    
+    width: 24%;
+}
+
+
+/* Root div */
+
+#root{
+    padding: 0px 10px;
+    font-size: 20px;
+}
+
+#dayTemp{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#hourProb{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bold{
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+span{
+    text-align: center;
 }
